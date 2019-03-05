@@ -1,7 +1,7 @@
 /* @flow */
 
 import * as React from 'react';
-import { Flex } from '@rebass/grid/emotion';
+import { Box } from '@rebass/grid/emotion';
 import Head from 'next/head';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
@@ -14,31 +14,30 @@ export default () => (
       <title>{'Home'}</title>
     </Head>
 
-    <Flex justifyContent="center">
-      <Paper
-        css={{
-          maxWidth: 960,
-          marginTop: 16,
-          marginBottom: 16,
-          width: '100%',
-          padding: 16,
-        }}
-      >
-        <Typography variant="h6" css={{ marginBottom: 24 }}>
-          Hello, Welcome to Total React Starter:
-        </Typography>
+    <Paper
+      component={Box}
+      my={16}
+      mx="auto"
+      p={16}
+      width={1}
+      css={{
+        maxWidth: 960,
+      }}
+    >
+      <Typography variant="h6" css={{ marginBottom: 24 }}>
+        Hello, Welcome to Total React Starter:
+      </Typography>
 
-        <Link href={{ pathname: '/property' }}>
-          <Button
-            to="/property"
-            color="primary"
-            variant="contained"
-            css={{ marginTop: 24 }}
-          >
-            Start
-          </Button>
-        </Link>
-      </Paper>
-    </Flex>
+      <Link href={{ pathname: '/properties' }}>
+        <Button
+          to="/properties"
+          color="primary"
+          variant="contained"
+          css={{ marginTop: 24 }}
+        >
+          Start
+        </Button>
+      </Link>
+    </Paper>
   </>
 );

@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     'relay',
     ['@babel/proposal-optional-chaining', { loose: true }],
+    'babel-plugin-styled-components',
     process.env.NODE_ENV === 'production'
       ? [
           'emotion',
